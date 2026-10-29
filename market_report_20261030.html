@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>市場レポート (2026-10-30)</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --border: #30363d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 16px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 auto 20px;
+    max-width: 960px;
+  }
+  .section h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ticker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+  }
+  .ticker .name {
+    flex: 2 1 auto;
+    min-width: 0;
+    font-weight: 600;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ticker .price {
+    flex: 1 0 auto;
+    width: 100px;
+    text-align: right;
+    font-weight: 700;
+  }
+  .ticker .change {
+    flex: 1 0 auto;
+    width: 90px;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+  .change.up { color: var(--green); }
+  .change.down { color: var(--red); }
+  .change.flat { color: var(--muted); }
+
+  .section.index .ticker {
+    padding: 10px 14px;
+  }
+  .section.index .ticker .price {
+    font-size: 1.6rem;
+    width: 140px;
+  }
+  .section.index .ticker .name {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 8px; }
+    .ticker { gap: 4px; padding: 6px 8px; font-size: 0.85rem; }
+    .ticker .price { width: 80px; }
+    .ticker .change { width: 72px; font-size: 0.8rem; }
+    .section.index .ticker .price { font-size: 1.2rem; width: 100px; }
+  }
+</style>
+</head>
+<body>
+  <h1>市場レポート (2026-10-30)</h1>
+  <section class="section index">
+    <h2>📊 指数サマリー</h2>
+    <div class="grid">
+      <div class="ticker">
+        <span class="name">日経平均株価</span>
+        <span class="price">64,659.47</span>
+        <span class="change up">▲ +1.10%</span>
+        <span class="change up">▲ +705.28</span>
+      </div>
+      <div class="ticker">
+        <span class="name">NASDAQ総合指数</span>
+        <span class="price">26,184.72</span>
+        <span class="change down">▼ -1.38%</span>
+        <span class="change down">▼ -365.13</span>
+      </div>
+      <div class="ticker">
+        <span class="name">NYダウ</span>
+        <span class="price">52,342.56</span>
+        <span class="change down">▼ -0.25%</span>
+        <span class="change down">▼ -132.54</span>
+      </div>
+      <div class="ticker">
+        <span class="name">S&amp;P500</span>
+        <span class="price">7,720.39</span>
+        <span class="change down">▼ -0.30%</span>
+        <span class="change down">▼ -23.59</span>
+      </div>
+      <div class="ticker">
+        <span class="name">SOX指数(フィラデルフィア半導体)</span>
+        <span class="price">11,518.20</span>
+        <span class="change down">▼ -1.42%</span>
+        <span class="change down">▼ -165.80</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>🇯🇵 日本株</h2>
+    <div class="grid">
+      <div class="ticker">
+        <span class="name">三菱重工業</span>
+        <span class="price">3,499.00</span>
+        <span class="change down">▼ -1.44%</span>
+        <span class="change down">▼ -51.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ノーリツ鋼機</span>
+        <span class="price">2,090.00</span>
+        <span class="change down">▼ -1.65%</span>
+        <span class="change down">▼ -35.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">スリー・ディー・マトリックス</span>
+        <span class="price">372.00</span>
+        <span class="change down">▼ -1.06%</span>
+        <span class="change down">▼ -4.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ウインテスト</span>
+        <span class="price">122.00</span>
+        <span class="change down">▼ -8.96%</span>
+        <span class="change down">▼ -12.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ウエストホールディングス</span>
+        <span class="price">2,122.00</span>
+        <span class="change down">▼ -2.93%</span>
+        <span class="change down">▼ -64.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">WHY HOW DO</span>
+        <span class="price">35.00</span>
+        <span class="change flat">→ +0.00%</span>
+        <span class="change flat">→ +0.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">環境フレンドリー</span>
+        <span class="price">45.00</span>
+        <span class="change flat">→ +0.00%</span>
+        <span class="change flat">→ +0.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">キタハマキャピタル</span>
+        <span class="price">14.00</span>
+        <span class="change down">▼ -6.67%</span>
+        <span class="change down">▼ -1.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ジェリービーンズ</span>
+        <span class="price">38.00</span>
+        <span class="change flat">→ +0.00%</span>
+        <span class="change flat">→ +0.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">REVOLUTION</span>
+        <span class="price">15.00</span>
+        <span class="change flat">→ +0.00%</span>
+        <span class="change flat">→ +0.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">JX金属</span>
+        <span class="price">3,151.00</span>
+        <span class="change up">▲ +2.17%</span>
+        <span class="change up">▲ +67.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">川崎重工業</span>
+        <span class="price">2,162.00</span>
+        <span class="change up">▲ +0.12%</span>
+        <span class="change up">▲ +2.50</span>
+      </div>
+      <div class="ticker">
+        <span class="name">淀川製鋼所</span>
+        <span class="price">1,344.00</span>
+        <span class="change down">▼ -1.47%</span>
+        <span class="change down">▼ -20.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">フジクラ</span>
+        <span class="price">4,195.00</span>
+        <span class="change up">▲ +2.04%</span>
+        <span class="change up">▲ +84.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">キオクシアHD</span>
+        <span class="price">14,505.00</span>
+        <span class="change up">▲ +1.15%</span>
+        <span class="change up">▲ +165.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">イオン</span>
+        <span class="price">1,168.00</span>
+        <span class="change up">▲ +1.48%</span>
+        <span class="change up">▲ +17.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">OLC</span>
+        <span class="price">3,170.00</span>
+        <span class="change up">▲ +0.06%</span>
+        <span class="change up">▲ +2.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ソニーFG</span>
+        <span class="price">142.50</span>
+        <span class="change up">▲ +0.49%</span>
+        <span class="change up">▲ +0.70</span>
+      </div>
+      <div class="ticker">
+        <span class="name">キムラタン</span>
+        <span class="price">29.00</span>
+        <span class="change flat">→ +0.00%</span>
+        <span class="change flat">→ +0.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">FPG</span>
+        <span class="price">1,597.00</span>
+        <span class="change down">▼ -0.99%</span>
+        <span class="change down">▼ -16.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">日本たばこ産業</span>
+        <span class="price">7,401.00</span>
+        <span class="change up">▲ +0.94%</span>
+        <span class="change up">▲ +69.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">日本製鉄</span>
+        <span class="price">659.20</span>
+        <span class="change up">▲ +0.26%</span>
+        <span class="change up">▲ +1.70</span>
+      </div>
+      <div class="ticker">
+        <span class="name">メタプラネット</span>
+        <span class="price">264.00</span>
+        <span class="change down">▼ -2.94%</span>
+        <span class="change down">▼ -8.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">楽天銀行</span>
+        <span class="price">6,061.00</span>
+        <span class="change up">▲ +3.47%</span>
+        <span class="change up">▲ +203.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">楽天グループ</span>
+        <span class="price">617.20</span>
+        <span class="change up">▲ +0.03%</span>
+        <span class="change up">▲ +0.20</span>
+      </div>
+      <div class="ticker">
+        <span class="name">信越化学工業</span>
+        <span class="price">6,010.00</span>
+        <span class="change up">▲ +0.10%</span>
+        <span class="change up">▲ +6.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">花王</span>
+        <span class="price">3,674.00</span>
+        <span class="change up">▲ +0.44%</span>
+        <span class="change up">▲ +16.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">武田薬品工業</span>
+        <span class="price">6,471.00</span>
+        <span class="change up">▲ +2.60%</span>
+        <span class="change up">▲ +164.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アステラス製薬</span>
+        <span class="price">2,513.00</span>
+        <span class="change up">▲ +0.48%</span>
+        <span class="change up">▲ +12.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">第一三共</span>
+        <span class="price">2,617.50</span>
+        <span class="change up">▲ +1.45%</span>
+        <span class="change up">▲ +37.50</span>
+      </div>
+      <div class="ticker">
+        <span class="name">リクルートホールディングス</span>
+        <span class="price">18,890.00</span>
+        <span class="change up">▲ +0.48%</span>
+        <span class="change up">▲ +90.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">日立製作所</span>
+        <span class="price">5,071.00</span>
+        <span class="change down">▼ -9.77%</span>
+        <span class="change down">▼ -549.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ソニーグループ</span>
+        <span class="price">3,936.00</span>
+        <span class="change down">▼ -0.53%</span>
+        <span class="change down">▼ -21.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">キーエンス</span>
+        <span class="price">76,360.00</span>
+        <span class="change down">▼ -3.57%</span>
+        <span class="change down">▼ -2,830.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ファナック</span>
+        <span class="price">5,795.00</span>
+        <span class="change down">▼ -1.91%</span>
+        <span class="change down">▼ -113.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">村田製作所</span>
+        <span class="price">6,890.00</span>
+        <span class="change up">▲ +2.82%</span>
+        <span class="change up">▲ +189.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">トヨタ自動車</span>
+        <span class="price">3,077.00</span>
+        <span class="change up">▲ +0.85%</span>
+        <span class="change up">▲ +26.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">本田技研工業</span>
+        <span class="price">1,763.00</span>
+        <span class="change up">▲ +0.03%</span>
+        <span class="change up">▲ +0.50</span>
+      </div>
+      <div class="ticker">
+        <span class="name">キヤノン</span>
+        <span class="price">4,697.00</span>
+        <span class="change up">▲ +1.89%</span>
+        <span class="change up">▲ +87.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">任天堂</span>
+        <span class="price">8,158.00</span>
+        <span class="change down">▼ -1.84%</span>
+        <span class="change down">▼ -153.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">三井物産</span>
+        <span class="price">5,098.00</span>
+        <span class="change up">▲ +1.11%</span>
+        <span class="change up">▲ +56.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">三菱商事</span>
+        <span class="price">4,908.00</span>
+        <span class="change up">▲ +1.26%</span>
+        <span class="change up">▲ +61.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">三菱UFJフィナンシャル・グループ</span>
+        <span class="price">3,464.00</span>
+        <span class="change up">▲ +2.58%</span>
+        <span class="change up">▲ +87.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">三井住友フィナンシャルグループ</span>
+        <span class="price">3,245.00</span>
+        <span class="change up">▲ +2.72%</span>
+        <span class="change up">▲ +86.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">みずほフィナンシャルグループ</span>
+        <span class="price">7,889.00</span>
+        <span class="change up">▲ +3.27%</span>
+        <span class="change up">▲ +250.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">東京海上ホールディングス</span>
+        <span class="price">567.00</span>
+        <span class="change up">▲ +2.16%</span>
+        <span class="change up">▲ +12.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">三菱地所</span>
+        <span class="price">3,768.00</span>
+        <span class="change up">▲ +1.56%</span>
+        <span class="change up">▲ +58.00</span>
+      </div>
+      <div class="ticker">
+        <span class="name">日本電信電話</span>
+        <span class="price">171.50</span>
+        <span class="change down">▼ -0.23%</span>
+        <span class="change down">▼ -0.40</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ソフトバンクグループ</span>
+        <span class="price">4,765.00</span>
+        <span class="change up">▲ +1.77%</span>
+        <span class="change up">▲ +83.00</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>🇺🇸 米国株</h2>
+    <div class="grid">
+      <div class="ticker">
+        <span class="name">テスラ</span>
+        <span class="price">403.30</span>
+        <span class="change down">▼ -0.23%</span>
+        <span class="change down">▼ -0.92</span>
+      </div>
+      <div class="ticker">
+        <span class="name">コインベース</span>
+        <span class="price">160.59</span>
+        <span class="change down">▼ -1.07%</span>
+        <span class="change down">▼ -1.73</span>
+      </div>
+      <div class="ticker">
+        <span class="name">iシェアーズ米国国債20年</span>
+        <span class="price">81.49</span>
+        <span class="change up">▲ +0.62%</span>
+        <span class="change up">▲ +0.50</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ロビンフッド</span>
+        <span class="price">91.59</span>
+        <span class="change up">▲ +0.17%</span>
+        <span class="change up">▲ +0.16</span>
+      </div>
+      <div class="ticker">
+        <span class="name">クアンタムスケープ</span>
+        <span class="price">4.20</span>
+        <span class="change down">▼ -0.94%</span>
+        <span class="change down">▼ -0.04</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ライオットプラットフォームズ</span>
+        <span class="price">13.74</span>
+        <span class="change down">▼ -4.91%</span>
+        <span class="change down">▼ -0.71</span>
+      </div>
+      <div class="ticker">
+        <span class="name">マラホールディングス</span>
+        <span class="price">7.17</span>
+        <span class="change down">▼ -2.52%</span>
+        <span class="change down">▼ -0.18</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アルトリア</span>
+        <span class="price">76.75</span>
+        <span class="change up">▲ +5.15%</span>
+        <span class="change up">▲ +3.76</span>
+      </div>
+      <div class="ticker">
+        <span class="name">コアウィーブ</span>
+        <span class="price">60.74</span>
+        <span class="change down">▼ -4.99%</span>
+        <span class="change down">▼ -3.19</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ストラテジー</span>
+        <span class="price">141.62</span>
+        <span class="change down">▼ -2.44%</span>
+        <span class="change down">▼ -3.54</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ネビウスグループ</span>
+        <span class="price">171.99</span>
+        <span class="change down">▼ -5.68%</span>
+        <span class="change down">▼ -10.35</span>
+      </div>
+      <div class="ticker">
+        <span class="name">オンダスインク</span>
+        <span class="price">6.88</span>
+        <span class="change up">▲ +0.29%</span>
+        <span class="change up">▲ +0.02</span>
+      </div>
+      <div class="ticker">
+        <span class="name">イノデータ</span>
+        <span class="price">46.17</span>
+        <span class="change down">▼ -3.11%</span>
+        <span class="change down">▼ -1.48</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ビットマインイマージョン</span>
+        <span class="price">21.66</span>
+        <span class="change down">▼ -1.77%</span>
+        <span class="change down">▼ -0.39</span>
+      </div>
+      <div class="ticker">
+        <span class="name">エヌビディア</span>
+        <span class="price">213.66</span>
+        <span class="change down">▼ -0.80%</span>
+        <span class="change down">▼ -1.72</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アメリカンスーパーコンダクター</span>
+        <span class="price">28.05</span>
+        <span class="change down">▼ -0.50%</span>
+        <span class="change down">▼ -0.14</span>
+      </div>
+      <div class="ticker">
+        <span class="name">インディセミコンダクタ</span>
+        <span class="price">1.78</span>
+        <span class="change up">▲ +1.71%</span>
+        <span class="change up">▲ +0.03</span>
+      </div>
+      <div class="ticker">
+        <span class="name">マイクロン</span>
+        <span class="price">934.27</span>
+        <span class="change down">▼ -4.98%</span>
+        <span class="change down">▼ -48.96</span>
+      </div>
+      <div class="ticker">
+        <span class="name">オクロ</span>
+        <span class="price">26.81</span>
+        <span class="change down">▼ -1.14%</span>
+        <span class="change down">▼ -0.31</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ポエットテクノロジーズ</span>
+        <span class="price">5.66</span>
+        <span class="change down">▼ -3.08%</span>
+        <span class="change down">▼ -0.18</span>
+      </div>
+      <div class="ticker">
+        <span class="name">サンディスク</span>
+        <span class="price">1,330.05</span>
+        <span class="change down">▼ -5.32%</span>
+        <span class="change down">▼ -74.72</span>
+      </div>
+      <div class="ticker">
+        <span class="name">Zスケーラー</span>
+        <span class="price">247.82</span>
+        <span class="change down">▼ -3.12%</span>
+        <span class="change down">▼ -7.98</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アンフェノール</span>
+        <span class="price">82.08</span>
+        <span class="change up">▲ +1.38%</span>
+        <span class="change up">▲ +1.12</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アプライドオプトエレクトロニクス</span>
+        <span class="price">79.19</span>
+        <span class="change down">▼ -3.69%</span>
+        <span class="change down">▼ -3.03</span>
+      </div>
+      <div class="ticker">
+        <span class="name">バーティブホールディングス</span>
+        <span class="price">245.92</span>
+        <span class="change up">▲ +1.23%</span>
+        <span class="change up">▲ +2.98</span>
+      </div>
+      <div class="ticker">
+        <span class="name">アステラボ</span>
+        <span class="price">290.43</span>
+        <span class="change down">▼ -2.28%</span>
+        <span class="change down">▼ -6.77</span>
+      </div>
+      <div class="ticker">
+        <span class="name">コヒレント</span>
+        <span class="price">237.22</span>
+        <span class="change down">▼ -0.99%</span>
+        <span class="change down">▼ -2.37</span>
+      </div>
+      <div class="ticker">
+        <span class="name">ハイペリオンDeFi</span>
+        <span class="price">3.50</span>
+        <span class="change up">▲ +16.83%</span>
+        <span class="change up">▲ +0.51</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>💰 仮想通貨</h2>
+    <div class="grid">
+      <div class="ticker">
+        <span class="name">Bitcoin USD</span>
+        <span class="price">78,766.65</span>
+        <span class="change down">▼ -3.07%</span>
+        <span class="change down">▼ -2,493.17</span>
+      </div>
+      <div class="ticker">
+        <span class="name">Hyperliquid USD</span>
+        <span class="price">92.60</span>
+        <span class="change up">▲ +14.19%</span>
+        <span class="change up">▲ +11.51</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>💴 為替・コモディティ・金利</h2>
+    <div class="grid">
+      <div class="ticker">
+        <span class="name">USD/JPY</span>
+        <span class="price">157.63</span>
+        <span class="change down">▼ -0.08%</span>
+        <span class="change down">▼ -0.13</span>
+      </div>
+      <div class="ticker">
+        <span class="name">Gold Dec 26</span>
+        <span class="price">4,031.00</span>
+        <span class="change down">▼ -0.51%</span>
+        <span class="change down">▼ -20.60</span>
+      </div>
+      <div class="ticker">
+        <span class="name">10-Year Bond</span>
+        <span class="price">4.99</span>
+        <span class="change down">▼ -1.11%</span>
+        <span class="change down">▼ -0.06</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
